@@ -1,0 +1,31 @@
+from models import db
+
+class Trek_Features(db.Model):
+    __tablename__ = 'trek_features'
+    
+    trek_id = db.Column(db.Integer, db.ForeignKey('trek_info.trek_id'), primary_key=True)
+    hiking = db.Column(db.Boolean, nullable=False, default=False)
+    camping = db.Column(db.Boolean, nullable=False, default=False)
+    walking = db.Column(db.Boolean, nullable=False, default=False)
+    bird_watching = db.Column(db.Boolean, nullable=False, default=False)
+    star_gazing = db.Column(db.Boolean, nullable=False, default=False)
+    photography = db.Column(db.Boolean, nullable=False, default=False)
+    snow_trail = db.Column(db.Boolean, nullable=False, default=False)
+    nature_exploration = db.Column(db.Boolean, nullable=False, default=False)
+    rock_climbing = db.Column(db.Boolean, nullable=False, default=False)
+    waterfall_visit = db.Column(db.Boolean, nullable=False, default=False)
+    river_crossing = db.Column(db.Boolean, nullable=False, default=False)
+    lake_visit = db.Column(db.Boolean, nullable=False, default=False)
+    dam_visit = db.Column(db.Boolean, nullable=False, default=False)
+    wildlife_vegetation = db.Column(db.Boolean, nullable=False, default=False)
+    wildanimals_sightings = db.Column(db.Boolean, nullable=False, default=False)
+    sunrise = db.Column(db.Boolean, nullable=False, default=False)
+    sunset = db.Column(db.Boolean, nullable=False, default=False)
+    viewpoints = db.Column(db.Boolean, nullable=False, default=False)
+    forest_trekking = db.Column(db.Boolean, nullable=False, default=False)
+    valley_trekking = db.Column(db.Boolean, nullable=False, default=False)
+    caves = db.Column(db.Boolean, nullable=False, default=False)
+    mountain_peaks = db.Column(db.Boolean, nullable=False, default=False)
+    kid_friendly = db.Column(db.Boolean, nullable=False, default=False)
+    pet_friendly = db.Column(db.Boolean, nullable=False, default=False)
+    beginner_friendly = db.Column(db.Boolean, nullable=False, default=False)
