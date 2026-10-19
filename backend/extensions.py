@@ -1,3 +1,4 @@
-from flask_bcrypt import Bcrypt
+from flask_security import SQLAlchemyUserDatastore
+from models import db, User, Role
 
-bcrypt = Bcrypt()
+user_datastore = SQLAlchemyUserDatastore(db, User, Role)
